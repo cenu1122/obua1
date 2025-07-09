@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Moja stranica sa glasovnim izgovorom</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+      background: #f0f0f0;
+    }
+    h1 {
+      color: #333;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Zdravo!</h1>
+  <p>Dobrodošao na moju stranicu. Klikni na dugme ispod da čuješ izgovoreni tekst.</p>
+
+  <button onclick="govori()">Izgovori tekst</button>
+
+  <script>
+    function govori() {
+      const govor = new SpeechSynthesisUtterance("Zdravo! Dobrodošao na moju stranicu.");
+      speechSynthesis.speak(govor);
+    }
+  </script>
+</body>
+</html>

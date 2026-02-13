@@ -1,45 +1,210 @@
-﻿<!DOCTYPE html>
-<html lang="sr">
+<!DOCTYPE html>
+<html lang="bs">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Moja stranica sa glasovnim izgovorom</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-      max-width: 600px;
-      margin: auto;
-      background: #f0f0f0;
-    }
-    h1 {
-      color: #333;
-    }
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 5px;
-    }
-    button:hover {
-      background-color: #0056b3;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatika Nustrez Halilović</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f6f8;
+            color: #222;
+        }
+
+        header {
+            background: #0d1b2a;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 24px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        .hero {
+            height: 500px;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                        url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        .section {
+            padding: 60px 40px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #0d1b2a;
+        }
+
+        .section p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .project img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project div {
+            padding: 20px;
+        }
+
+        .contact {
+            background: #0d1b2a;
+            color: white;
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 10px 0;
+        }
+
+        footer {
+            background: #000;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        button {
+            background: #0077b6;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            margin-top: 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background: #0096c7;
+        }
+    </style>
+
 </head>
 <body>
-  <h1>Zdravo!</h1>
-  <p>Dobrodošao na moju stranicu. Klikni na dugme ispod da čuješ izgovoreni tekst.</p>
 
-  <button onclick="govori()">Izgovori tekst</button>
+<header>
+    <h1>Automatika Nustrez Halilović</h1>
+    <nav>
+        <a href="#">Početna</a>
+        <a href="#">O nama</a>
+        <a href="#">Projekti</a>
+        <a href="#">Kontakt</a>
+    </nav>
+</header>
 
-  <script>
-    function govori() {
-      const govor = new SpeechSynthesisUtterance("Zdravo! Dobrodošao na moju stranicu.");
-      speechSynthesis.speak(govor);
-    }
-  </script>
+<section class="hero">
+    <div>
+        <h2>Industrijska automatika</h2>
+        <p>Profesionalna rješenja za automatizaciju i upravljanje sistemima</p>
+        <button>Kontaktirajte nas</button>
+    </div>
+</section>
+
+<section class="section">
+    <h3>O nama</h3>
+    <p>
+        Automatika Nustrez Halilović pruža profesionalne usluge iz oblasti industrijske automatike,
+        PLC programiranja, elektro instalacija i automatizacije industrijskih procesa.
+        Naš cilj je pružiti pouzdana, moderna i efikasna rješenja za industriju i objekte.
+    </p>
+</section>
+
+<section class="section">
+    <h3>Naši projekti</h3>
+
+    <div class="projects">
+
+        <div class="project">
+            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789">
+            <div>
+                <h4>Industrijski sistem upravljanja</h4>
+                <p>Automatizacija proizvodnog sistema koristeći PLC kontrolere.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758">
+            <div>
+                <h4>Elektro instalacije</h4>
+                <p>Kompletna instalacija i puštanje sistema u rad.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="https://images.unsplash.com/photo-1581092335397-9583eb92d232">
+            <div>
+                <h4>Automatizacija objekata</h4>
+                <p>Pametna kontrola i upravljanje industrijskim objektima.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="section contact">
+    <h3>Kontakt</h3>
+    <p>Email: info@automatika-halilovic.ba</p>
+    <p>Telefon: +387 61 000 000</p>
+    <p>Lokacija: Bosna i Hercegovina</p>
+</section>
+
+<footer>
+    © 2026 Automatika Nustrez Halilović. Sva prava zadržana.
+</footer>
+
 </body>
 </html>
